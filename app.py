@@ -22,13 +22,18 @@ st.set_page_config(
 # def load_model():
 #     return joblib.load("house_price_prediction_pipeline.pkl")
 
-
 @st.cache_resource
 def load_model():
     return joblib.load("best_house_price_model.pkl")
 
 
 model = load_model()
+# @st.cache_resource
+# def load_model():
+#     return joblib.load("best_house_price_model.pkl")
+
+
+# model = load_model()
 
 
 # ============================================================
