@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-# import joblib
+import joblib
 
 
 # ============================================================
@@ -18,9 +18,14 @@ st.set_page_config(
 # LOAD MODEL
 # ============================================================
 
+# @st.cache_resource
+# def load_model():
+#     return joblib.load("house_price_prediction_pipeline.pkl")
+
+
 @st.cache_resource
 def load_model():
-    return joblib.load("property_price_model.pkl")
+    return joblib.load("best_house_price_model.pkl")
 
 
 model = load_model()
