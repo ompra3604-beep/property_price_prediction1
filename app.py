@@ -226,8 +226,12 @@ if st.button(
     })
 
     try:
-
         prediction = model.predict(input_data)[0]
+
+        st.success(
+        f"Predicted Property Price: ${prediction:,.2f}"
+        )
+        # prediction = model.predict(input_data)[0]
 
         st.success("Prediction generated successfully!")
 
